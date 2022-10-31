@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Chai Pay" parallel="tests" thread-count="5">
+  <test thread-count="5" name="PaymentPageTest">
+    <classes>
+      <class name="PaymentFlowAutomation.testcases.PaymentPageTest">
+      	<methods>
+      		<include name="verifyPaymentPageTitle"/>
+      		<include name="verifyEditingAmountField"/>
+      		<include name="verifyEditingDefaultAmount"/>
+      		<include name="makeAmountFieldEmpty"/>
+      		<include name="amounttLessThan1"/>
+      		<include name="verifyDefaultLanguage"/>
+      		<include name="verifyDocs"/>
+      		<include name="clickOnPayNow"/>
+      	</methods>
+      </class>
+    </classes>
+  </test> 
+  
+  <test thread-count="5" name="CheckoutPageTest">
+    <classes>
+      <class name="PaymentFlowAutomation.testcases.CheckoutPageTest">
+      	<methods>
+      		<include name="selectPayNowWallet"/>
+      		<include name="validateCheckoutAmount"/>
+      		<include name="payNowWithoutPaymentOption"/>
+      		<include name="enterCreditcardNumb"/>
+      	</methods>
+      </class>
+    </classes>
+  </test>
+</suite>
